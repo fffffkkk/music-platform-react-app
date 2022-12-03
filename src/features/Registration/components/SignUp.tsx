@@ -3,7 +3,7 @@ import {createUserWithEmailAndPassword} from "firebase/auth";
 
 import {auth} from "@/firebase";
 import AuthForm from "@/features/Registration/components/form/AuthForm";
-import {useActions} from "@/hooks/useActions";
+import {useActions} from "@/hooks/use-actions";
 
 interface SignUpProps {
 };
