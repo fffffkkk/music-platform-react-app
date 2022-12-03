@@ -1,12 +1,11 @@
 import React from 'react';
+import {AuthForm} from "@/features/Registration";
 
 interface RegistrationProps {
 };
 const Registration = () => {
 	return (
-		<div>
-			Registration
-		</div>
+		<AuthForm title={'Регистрация'}/>
 	);
 };
 
