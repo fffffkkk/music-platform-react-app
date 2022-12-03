@@ -1,15 +1,14 @@
 import React from 'react';
 
 import AppRouter from "@/components/AppRouter";
+import MainLayout from "@/layouts/MainLayout";
 
 interface AppProps {
 }
 
 const App = () => {
 	return (
-		<div className='font-bold text-2xl'>
-			<AppRouter/>
-		</div>
+		<MainLayout><AppRouter/></MainLayout>
 	);
 };
 
