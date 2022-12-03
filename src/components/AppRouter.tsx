@@ -2,11 +2,13 @@ import React from 'react';
 import {Route, Routes} from "react-router-dom";
 
 import {privateRoutes, publicRoutes} from "@/data/routes";
+import {useAuth} from "@/hooks/useAuth";
 
 interface AppRouterProps {
 };
 const AppRouter = () => {
-	const isAuth = false;
+	const {isAuth} = useAuth();
+	
 	return (
 		<Routes>
 			{
