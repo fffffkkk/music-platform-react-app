@@ -1,11 +1,16 @@
 import React from 'react';
-import {AuthForm} from "@/features/Registration";
+import {Route, Routes} from "react-router-dom";
+
+import {SignIn, SignUp} from "@/features/Registration";
 
 interface RegistrationProps {
 };
 const Registration = () => {
 	return (
-		<AuthForm title={'Регистрация'}/>
+		<Routes>
+			<Route path='/*' element={<SignUp/>}/>
+			<Route path='/signIn' element={<SignIn/>}/>
+		</Routes>
 	);
 };
 
