@@ -8,7 +8,9 @@ interface AppProps {
 
 const App = () => {
 	return (
-		<MainLayout><AppRouter/></MainLayout>
+		<MainLayout>
+			<AppRouter/>
+		</MainLayout>
 	);
 };
 

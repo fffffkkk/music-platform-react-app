@@ -1,12 +1,14 @@
 import React from 'react';
 
+import HomeLayout from "@/layouts/HomeLayout";
+
 interface HomeProps {
 };
 const Home = () => {
 	return (
-		<div>
-			Home
-		</div>
+		<HomeLayout>
+			<div>hello</div>
+		</HomeLayout>
 	);
 };
 
