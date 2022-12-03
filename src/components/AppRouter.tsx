@@ -2,7 +2,7 @@ import React from 'react';
 import {Route, Routes} from "react-router-dom";
 
 import {privateRoutes, publicRoutes} from "@/data/routes";
-import {useAuth} from "@/hooks/useAuth";
+import {useAuth} from "@/hooks/use-auth";
 
 interface AppRouterProps {
 };

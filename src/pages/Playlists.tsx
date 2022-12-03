@@ -1,12 +1,14 @@
 import React, {FC} from 'react';
 
+import GridLayout from "@/layouts/GridLayout";
+
 interface PlaylistsProps {
 };
 const Playlists: FC<PlaylistsProps> = ({}) => {
 	return (
-		<div>
-			Playlists
-		</div>
+		<GridLayout>
+			123
+		</GridLayout>
 	);
 };
 
