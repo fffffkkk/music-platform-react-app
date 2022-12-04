@@ -1,13 +1,9 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react';
 
-interface SearchProps {
-};
+interface SearchProps {}
+
 const Search: FC<SearchProps> = ({}) => {
-	return (
-		<div>
-			Search
-		</div>
-	);
+	return <div>Search</div>;
 };
 
 export default Search;

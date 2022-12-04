@@ -1,6 +1,6 @@
-import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import {IUser} from "@/models/IUser";
+import { IUser } from '@/models/IUser';
 
 const USER_AUTH_KEY = 'uak';
 

@@ -1,9 +1,9 @@
-import {createApi, fakeBaseQuery} from '@reduxjs/toolkit/query/react';
-import {collection, getDocs} from "firebase/firestore";
+import { createApi, fakeBaseQuery } from '@reduxjs/toolkit/query/react';
+import { addDoc, collection, getDocs, getDoc, doc } from 'firebase/firestore';
 
-import {db} from "@/firebase";
-import playlists from "@/pages/Playlists";
-import {IPlaylist} from "@/models/IPlaylist";
+import { db } from '@/firebase';
+import playlists from '@/pages/Playlists';
+import { IPlaylist } from '@/models/IPlaylist';
 
 export const playlistAPI = createApi({
 	reducerPath: 'playlistAPI',
@@ -18,16 +18,29 @@ export const playlistAPI = createApi({
 					let playlists: IPlaylist[] = [];
 					querySnapshot?.forEach((doc) => {
 						//@ts-ignore
-						playlists.push({...doc.data()});
+						playlists.push({ id: doc.id, ...doc.data() });
 					});
-					return {data: playlists};
+					return { data: playlists };
 				} catch (error) {
-					return {error};
+					return { error };
 				}
 			},
-			providesTags: ['playlist']
+			providesTags: ['playlist'],
+		}),
+		getPlaylistByID: builder.query<any, any>({
+			async queryFn(id: string) {
+				try {
+					const docRef = doc(db, 'playlists', id);
+					const docSnap = await getDoc(docRef);
+
+					return { data: docSnap.data() };
+				} catch (error) {
+					return { error };
+				}
+			},
+			providesTags: ['playlist'],
 		}),
 	}),
 });
 
-export const {useGetAllPlaylistsQuery} = playlistAPI;
+export const { useGetAllPlaylistsQuery, useGetPlaylistByIDQuery } = playlistAPI;

@@ -1,13 +1,9 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react';
 
-interface ProfileProps {
-};
+interface ProfileProps {}
+
 const Profile: FC<ProfileProps> = ({}) => {
-	return (
-		<div>
-			Profile
-		</div>
-	);
+	return <div>Profile</div>;
 };
 
 export default Profile;

@@ -1,7 +1,7 @@
-import {initializeApp} from 'firebase/app';
-import {getStorage} from 'firebase/storage';
-import {getAuth} from 'firebase/auth';
-import {getFirestore} from 'firebase/firestore';
+import { initializeApp } from 'firebase/app';
+import { getStorage } from 'firebase/storage';
+import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
 	apiKey: import.meta.env.VITE_APP_API_KEY,

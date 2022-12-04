@@ -1,14 +1,14 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react';
 
-import {Cards} from "@/features/playlists";
-import GridLayout from "@/layouts/GridLayout";
+import { Cards } from '@/features/playlists';
+import GridLayout from '@/layouts/GridLayout';
 
-interface PlaylistsProps {
-};
+interface PlaylistsProps {}
+
 const Playlists: FC<PlaylistsProps> = ({}) => {
 	return (
 		<GridLayout>
-			<Cards/>
+			<Cards />
 		</GridLayout>
 	);
 };
