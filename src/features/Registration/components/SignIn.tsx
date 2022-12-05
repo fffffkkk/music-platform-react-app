@@ -10,11 +10,11 @@ interface SignInProps {}
 
 const SignIn = () => {
 	const { addUser } = useActions();
-	const handleSignIn = (e: React.FormEvent, form: { login: string, password: string }) => {
+	const handleSignIn = (e: React.FormEvent, form: { email: string, password: string }) => {
 		e.preventDefault();
-		if (!form.login || !form.password) return;
+		if (!form.email || !form.password) return;
 
-		signInWithEmailAndPassword(auth, form.login, form.password)
+		signInWithEmailAndPassword(auth, form.email, form.password)
 			.then(({user}) => {
 				addUser({
 					email: user.email!,

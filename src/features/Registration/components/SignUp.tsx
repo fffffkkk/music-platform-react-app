@@ -11,12 +11,12 @@ const SignUp = () => {
 	const { addUser } = useActions();
 	const handleSignUp = (
 		e: React.FormEvent,
-		form: { login: string, password: string }
+		form: { email: string, password: string }
 	) => {
 		e.preventDefault();
-		if (!form.login || !form.password) return;
+		if (!form.email || !form.password) return;
 
-		createUserWithEmailAndPassword(auth, form.login, form.password).then(
+		createUserWithEmailAndPassword(auth, form.email, form.password).then(
 			({ user }) => {
 				addUser({
 					email: user.email!,
